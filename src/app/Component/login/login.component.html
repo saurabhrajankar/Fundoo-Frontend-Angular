@@ -1,0 +1,52 @@
+<div fxLayoutAlign="center center">
+    <mat-card  flex class="card">
+        <div>
+            <mat-card-title class="fundoo">
+                <div class="mat-card-header-text">
+                    <span style="color:#4285F4;font-family: Google Sans;">F</span>
+                    <span style="color:#DB4437;font-family: Google Sans;">u</span>
+                    <span style="color:#F4B400;font-family: Google Sans;">n</span>
+                    <span style="color:#0F9D58;font-family: Google Sans;">d</span>
+                    <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
+                    <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
+                </div>
+            </mat-card-title>
+        </div>
+        <br>
+        <div>
+            <mat-card-title class="mattitle" fxLayoutAlign="center center">Sign In</mat-card-title>
+            <br>
+            <mat-card-subtitle class="matsubtitle" fxLayoutAlign="center center"><b>to continue to fundoo</b></mat-card-subtitle>
+        </div>
+
+        <form [formGroup]="loginform" (ngSubmit)="loginsubmit()">
+            <div class="emailpass">
+                <mat-form-field appearance="outline" class="email" >
+                    <mat-label aria-autocomplete="off">Email id</mat-label>
+                    <input matInput placeholder="Enter your email id" formControlName="email" />
+                    <mat-error *ngIf="loginform.value.Email">Enter Valid Email</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="password" >
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput placeholder="Enter your password" type="password" formControlName="password" />
+                    <mat-error *ngIf="loginform.value.Password">Enter Your password</mat-error>
+                </mat-form-field>
+                <div>
+                    <button mat-button class="forgot" style="color:rgb(36, 62, 70);" routerLink="../Forget"><b>ForgotPassword?</b></button>
+                </div>
+            </div>
+            <div class="register">
+                <button mat-button style="color:rgb(34, 65, 75);" routerLink="../Registration"><b>Create Account</b></button>
+            </div>  
+            <div style="margin-left: 270px;">
+                <button class="button">
+                    <span class="button_lg">
+                        <span class="button_sl"></span>
+                        <span class="button_text">Login</span>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </mat-card>
+
+</div>

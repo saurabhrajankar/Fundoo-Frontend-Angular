@@ -1,0 +1,39 @@
+<div fxLayoutAlign="center center" >
+    <mat-card  flex class="card">
+        <div>
+            <mat-card-title class="fundoo">
+                <div class="mat-card-header-text">
+                    <span style="color:#4285F4;font-family: Google Sans;">F</span>
+                    <span style="color:#DB4437;font-family: Google Sans;">u</span>
+                    <span style="color:#F4B400;font-family: Google Sans;">n</span>
+                    <span style="color:#0F9D58;font-family: Google Sans;">d</span>
+                    <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
+                    <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
+                </div>
+            </mat-card-title>
+        </div>
+        <br>
+        <div>
+            <mat-card-title class="mattitle" fxLayoutAlign="center center">Reset Password</mat-card-title>
+            <br>
+            <mat-card-subtitle class="matsubtitle" fxLayoutAlign="center center"><b>Enter a new password to continue</b></mat-card-subtitle>
+        </div>
+
+        <form [formGroup]="restform" (ngSubmit)="restSubmit()">
+            <div class="emailpass">
+                <mat-form-field appearance="outline" class="password1" >
+                    <mat-label aria-autocomplete="off">Passord</mat-label>
+                    <input matInput placeholder="Password" formControlName="new_password" />
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="password2" >
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput placeholder="Confirm Password" formControlName="confirm_password" />
+                </mat-form-field> 
+            </div>
+            <div style="margin-left: 300px;">
+                <button mat-raised-button color="primary" >Next</button>
+            </div>
+        </form>
+    </mat-card>
+
+</div>

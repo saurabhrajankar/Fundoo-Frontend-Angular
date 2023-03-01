@@ -1,0 +1,2 @@
+<app-takenote (takenote)="receiveMessage($event)"></app-takenote>
+<app-displaynote [noteslist]="Notearray" (displayToGetAllNoteEvt)="receiveMessage($event)" (updateEvent)="receiveMessage($event)"></app-displaynote>

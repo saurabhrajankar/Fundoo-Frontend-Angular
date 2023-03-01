@@ -1,0 +1,58 @@
+<div style="display: flex;" *ngIf="!trash">
+    <div>
+        <button mat-icon-button title="Remind Me">
+            <img src="../../../assets/NoteImg/add_alert_FILL0_wght400_GRAD0_opsz48.png" style="height:18px;width:18px;">
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button title="Add Collaborator">
+            <img src="../../../assets/NoteImg/groups_FILL0_wght400_GRAD0_opsz48.png" style="height:18px;width:18px;">
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button title="Background Options" [matMenuTriggerFor]="col" >
+            <img src="../../../assets/NoteImg/palette_FILL0_wght400_GRAD0_opsz48.png" style="height:18px;width:18px;">
+        </button>
+        <mat-menu #col="matMenu">
+            <div class="background">
+              <div class="bg-color" *ngFor="let color of Colorsarray">
+                <button class="colorBoxSetting" [style.background]="color.code" (click)="setColors(color)"></button>
+              </div>
+            </div>
+          </mat-menu>
+    </div>
+    <div>
+        <button mat-icon-button title="Add Images">
+            <img src="../../../assets/NoteImg/image_FILL0_wght400_GRAD0_opsz48.png" style="height:18px;width:18px;">
+        </button>
+    </div>
+    <div *ngIf="!archiveNote">
+        <button mat-icon-button title="Archive" (click)="archivenote()">
+            <img src="../../../assets/NoteImg/archive_FILL0_wght400_GRAD0_opsz48.png" style="height:18px;width:18px;">
+        </button>
+    </div>
+    <div *ngIf="archiveNote">
+        <button mat-icon-button title="UnArchive" (click)="unarchivenote()">
+            <img src="../../../assets/NoteImg/unarchive_FILL0_wght400_GRAD0_opsz48.png" style="height:18px;width:18px;">
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button title="More" [matMenuTriggerFor]="menu">
+            <img src="../../../assets/NoteImg/more_vert_FILL0_wght400_GRAD0_opsz48.png" style="height:18px;width:18px;">
+            <mat-menu #menu>
+                <button mat-menu-item (click)="trashnote()">Delete</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing </button>
+                <button mat-menu-item>Show checkboxes</button>
+            </mat-menu>
+        </button>
+    </div>
+</div>
+<div *ngIf="trash">
+    <button mat-icon-button title="DeleteForever" (click)="deletenote()">
+        <img src="../../../assets/NoteImg/delete_FILL0_wght400_GRAD0_opsz48 (1).png" style="height:18px;width:18px;">
+    </button>
+    <button mat-icon-button title="Restore" (click)="restorenote()">
+        <img src="../../../assets/NoteImg/undo_FILL0_wght400_GRAD0_opsz48.png" style="height:18px;width:18px;">
+    </button>
+</div>

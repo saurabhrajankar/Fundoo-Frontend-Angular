@@ -1,0 +1,85 @@
+<div>
+    <!-- Left side toolbar -->
+    <mat-toolbar class="toolbar">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            (click)="drawer.toggle()" aria-label="Main Menu">  <mat-icon>menu</mat-icon>
+        </button>
+        <img src="../../../assets/NoteImg/keep_2020q4_48dp.png"
+            style="height:40px;width:40px;cursor: pointer;" >
+            <div class="mat-card-header-text" title="Keep" style="padding-top: 10px; ">
+                <span style="color:#4285F4;font-family: Google Sans;">F</span>
+                <span style="color:#DB4437;font-family: Google Sans;">u</span>
+                <span style="color:#F4B400;font-family: Google Sans;">n</span>
+                <span style="color:#0F9D58;font-family: Google Sans;">d</span>
+                <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
+                <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
+            </div>
+
+        <div class="Allsearchbox">
+            <img style="margin-left: 10px; height: 20px;margin-top: 8px;" src="../../../assets/NoteImg/search_FILL0_wght400_GRAD0_opsz48.png">
+            <input class="inputSearchbox" type="search" placeholder="Search" (keyup)="search($event)" >
+        </div>
+        <!-- Side tool bar -->
+        <div class="Sidetool">
+            <button mat-icon-button class="toolbarbuttons">
+                <img src="../../../assets/NoteImg/refresh_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Refresh">
+            </button>
+
+            <button mat-icon-button class="toolbarbuttons">
+                <img src="../../../assets/NoteImg/dns_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="List View">
+            </button>
+
+            <button mat-icon-button class="toolbarbuttons">
+                <img src="../../../assets/NoteImg/settings_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Settings">
+            </button>
+        </div>
+    </mat-toolbar>
+</div>
+<div class="downcontainer">
+    <div class="lefticon" style="width: 70px;height: 800px;">
+        <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()" routerLink="/Dashboard/notes">
+            <img src="../../../assets/NoteImg/lightbulb_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Refresh">
+        </button>
+        <br>
+        <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+            <img src="../../../assets/NoteImg/notifications_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Notification">
+        </button>
+        <br>
+        <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+            <img src="../../../assets/NoteImg/edit_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Edit Labels">
+        </button>
+        <br>
+        <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()" routerLink="/Dashboard/archive">
+            <img src="../../../assets/NoteImg/archive_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Archive">
+        </button>
+        <br>
+        <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()" routerLink="/Dashboard/trash">
+            <img src="../../../assets/NoteImg/delete_FILL0_wght400_GRAD0_opsz48 (1).png" style="height:26px;width:26px;" title="Trash" >
+        </button>
+    </div>
+    <mat-drawer-container class="example-container" autosize>
+       <mat-drawer #drawer class="example-sidenav" mode="side">    
+            <div class="rightname" style="width: 230px;height: 800px;">
+                <div style="font-family: serif;" class="labels" >
+                    <h2 style="font-family: serif;padding-left: 10px; margin-top: 14px;">Notes</h2>
+                </div>
+                <div style="height:48px;" class="labels">
+                    <h2 style="font-family: serif;padding-left: 10px; margin-top: 14px;">Reminders</h2>
+                </div>
+                <div style="height:48px;" class="labels">
+                    <h2 style="font-family: serif;padding-left: 10px; margin-top: 5px;">Edit Labels</h2>
+                </div>
+                <div style="height:48px;" class="labels" >
+                    <h2 style="font-family: serif;padding-left: 10px; margin-top: 1px;">Archive</h2>
+                </div>
+                <div style="height:48px;" class="labels">
+                    <h2 style="font-family: serif;padding-left: 10px; margin-top: 4px;">Trash</h2>
+                </div>
+            </div>
+        </mat-drawer>
+       
+    </mat-drawer-container>
+    <div style="width: 100%;height:fit-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

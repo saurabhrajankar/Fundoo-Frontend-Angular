@@ -1,0 +1,33 @@
+<div class="main">
+    <form [formGroup]="createform" (ngSubmit)="OnSubmit()">
+        <div class="up" (click)="elborate()" *ngIf="display || !display">
+            <input placeholder="Title" class="titleInput" formControlName="title">
+            <div class="titleImgSection">
+                <div *ngIf="ImgOne">
+                    <a class="iconstag1"> <img src="../../../assets/NoteImg/check_box_FILL0_wght400_GRAD0_opsz48.png"
+                            height="25px" title="New List"> </a>
+                    <a class="iconstag2"> <img src="../../../assets/NoteImg/brush_FILL0_wght400_GRAD0_opsz48.png"
+                            height="25px" title="New Note With Drawing"> </a>
+                    <a class="iconstag3"> <img src="../../../assets/NoteImg/image_FILL0_wght400_GRAD0_opsz48.png"
+                            height="25px" title="New Note With Image"> </a>
+                </div>
+                <span *ngIf="ImgTwo">
+                    <a> <img src="../../../assets/NoteImg/push_pin_FILL0_wght400_GRAD0_opsz48.png" height="25px"
+                            title="Pin Note"> </a>
+                </span>
+            </div>
+        </div>
+
+        <div class="down">
+            <div appearance="fill" *ngIf="display">
+                <textarea matInput placeholder="Take a note" class="takeanote" formControlName="descrption"></textarea>
+                <div style="display: flex;">
+                    <app-icon></app-icon>
+                    <div style="margin-left: auto;margin-right: 10px;margin-top: 10px;">
+                        <button mat-button>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
