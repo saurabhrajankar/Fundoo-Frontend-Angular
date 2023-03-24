@@ -1,149 +1,122 @@
-.card {
-  width: 380px;
-  height: 440px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  border-radius: 3%;
-  border: 1px solid rgb(230 230 230);
-  box-shadow: 0px 0px 10px #00000029;
+.maincontainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.card{
+  width: 410px;
+  height: 450px;
+}
+
 .fundoo{
-  font-size: 30px;
-  margin-left: 128px;
-}
-.email
-{
-  margin-left: 15px;
-  margin-right: 15px;
-  width: 350px;
-}
-.password
-{
-  margin-left: 15px;
-  margin-right: 15px;
-  width: 350px;
-}
-
-//Login
-.button {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  background: none;
-  color: #0f1923;
-  cursor: pointer;
-  position: relative;
-  padding: 8px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
   font-weight: bold;
-  font-size: 14px;
-  transition: all .15s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.F {
+  color: #4285F4;
+  font-family: Google Sans;
+  font-size: 30px
 }
 
-.button::before,
-.button::after {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  left: 0;
-  height: calc(50% - 5px);
-  border: 1px solid #7D8082;
-  transition: all .15s ease;
+.U {
+  color: #DB4437;
+  font-family: Google Sans;
 }
 
-.button::before {
-  top: 0;
-  border-bottom-width: 0;
+.N {
+  color: rgb(146, 4, 228);
+  font-family: Google Sans;
 }
 
-.button::after {
-  bottom: 0;
-  border-top-width: 0;
+.D {
+  color: #F4B400;
+  font-family: Google Sans
 }
 
-.button:active,
-.button:focus {
-  outline: none;
+.O {
+  color: #0F9D58;
+  font-family: Google Sans
 }
 
-.button:active::before,
-.button:active::after {
-  right: 3px;
-  left: 3px;
+.O {
+  color: rgb(146, 4, 228);
+  font-family: Google Sans;
 }
 
-.button:active::before {
-  top: 3px;
+.mattitle{
+  margin-top: 10px;
+  width: 100%;
+  height: 20%;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.matsubtitle{
+  display: flex;
+  justify-content: center;
+}
+.form{
+  margin-top: 20px;
+  width: 100%;
+  //height: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.button:active::after {
-  bottom: 3px;
+.email{
+  margin-top: 10px;
+  width: 90%;
+  height: 6vh;
 }
 
-.button_lg {
-  position: relative;
-  display: block;
-  padding: 10px 20px;
-  color: #fff;
-  background-color: #0f1923;
-  overflow: hidden;
-  box-shadow: inset 0px 0px 0px 1px transparent;
+.pass{
+  margin-top: 20px;
+  width: 90%;
+  height: 6vh;
 }
 
-.button_lg::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 2px;
-  background-color: #0f1923;
+.forgot{
+  margin-top: 50px;
+  display: flex;
+  align-self: flex-start;
 }
 
-.button_lg::after {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 4px;
-  height: 4px;
-  background-color: #0f1923;
-  transition: all .2s ease;
+.login{
+  //width: 90%;
+ // justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 170px;
 }
 
-.button_sl {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: -1px;
-  left: -8px;
-  width: 0;
-  background-color: #ff4655;
-  transform: skew(-15deg);
-  transition: all .2s ease;
+.createaccount{
+  color: #4285F4;
 }
 
-.button_text {
-  position: relative;
+@media only screen and (max-width: 600px) {
+  .card{
+      width: 100%;
+      height: 100%;
+  }
+
+  .fundoo{
+      margin-top: 50px;
+  }
+
+  .login{
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+  }
 }
-
-.button:hover {
-  color: #0f1923;
-}
-
-.button:hover .button_sl {
-  width: calc(100% + 15px);
-}
-
-.button:hover .button_lg::after {
-  background-color: #fff;
-}
-
-

@@ -1,3 +1,4 @@
+
 <div class="main">
     <form [formGroup]="createform" (ngSubmit)="OnSubmit()">
         <div class="up" (click)="elborate()" *ngIf="display || !display">
@@ -19,13 +20,14 @@
         </div>
 
         <div class="down">
-            <div appearance="fill" *ngIf="display">
+            <div *ngIf="display">
                 <textarea matInput placeholder="Take a note" class="takeanote" formControlName="descrption"></textarea>
                 <div style="display: flex;">
                     <app-icon></app-icon>
-                    <div style="margin-left: auto;margin-right: 10px;margin-top: 10px;">
+                    <div class="matbutton">
                         <button mat-button>Close</button>
                     </div>
+                   
                 </div>
             </div>
         </div>

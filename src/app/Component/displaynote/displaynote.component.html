@@ -1,18 +1,19 @@
-<div class="container">
+`<div class="container">
     <div class="notes" *ngFor="let notes of noteslist | filter : filterNote"  >
-        <div class="main" [style.background]="notes.color">
-            <div>
+        <mat-card class="main" [style.background]="notes.color">
+            <!-- <div>
                 <p>{{notes.noteID}}</p>
-            </div>
+            </div> -->
             <div class="title">
                 <p (click)="EditNoteDialogBox(notes)">{{notes.title}}</p>
             </div>
-            <div class="description">
+            <mat-card-content class="description">
                 <p (click)="EditNoteDialogBox(notes)">{{notes.descrption}}</p>
-            </div>
+            </mat-card-content>
+            
             <div class="icon">
-                <app-icon [trashnoteC]="notes" (RefreshEvent)="receiveMessage($event)"></app-icon>
+                <app-icon [trashnoteC]="notes" [istrashed]="trash"  (RefreshEvent)="receiveMessage($event)"></app-icon>
             </div>
-        </div>
+        </mat-card>
     </div>
 </div>

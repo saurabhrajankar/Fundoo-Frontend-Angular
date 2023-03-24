@@ -7,9 +7,10 @@ import { NoteService } from 'src/app/Services/Note/note.service';
   styleUrls: ['./trash.component.scss']
 })
 export class TrashComponent implements OnInit {
-
   constructor(private note: NoteService) { }
+  trash=true;
   notesArray:any;
+  
   ngOnInit(): void {
     this.GetAllNotes();
   }

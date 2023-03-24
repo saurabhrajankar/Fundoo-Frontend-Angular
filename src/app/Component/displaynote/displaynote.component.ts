@@ -9,12 +9,12 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
   styleUrls: ['./displaynote.component.scss']
 })
 export class DisplaynoteComponent implements OnInit {
-
   filterNote:any;
   constructor(public dialog:MatDialog, private data:DataService) { }
   @Input() noteslist:any;
   @Output() displayToGetAllNoteEvt = new EventEmitter<string>();  //Eventname(objname)=new classname ==Child to parent
   @Output() updateEvent =new EventEmitter<string>();
+  @Input() trash:any;
   message : any;
   
   ngOnInit(): void {
@@ -22,14 +22,12 @@ export class DisplaynoteComponent implements OnInit {
     {
       console.log("Search In Progress",Response);
       this.filterNote=Response;
-    })
-    
+    })   
   }
-
   EditNoteDialogBox(notes:any)
   {
     const dialogbox=this.dialog.open(UpdatenoteComponent,{
-      width:'60%',
+      width:'45%',
       height:'auto',
       data:notes 
     })

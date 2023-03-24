@@ -77,6 +77,6 @@ export class NoteService {
       })
     }
     return this.httpService.PutService(this.base+'Note/UpdateColor?NoteId='+reqData.noteID+"&Color="+reqData.Color,reqData,true,header);
-  }
+  } 
 }
 

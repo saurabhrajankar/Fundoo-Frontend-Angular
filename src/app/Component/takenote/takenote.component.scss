@@ -1,9 +1,9 @@
 .main {
+    //border: 2px solid red;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 8px;
     background: #fff;
     width: 50%;
-    box-shadow: rgb(110, 110, 110) 0px 2px 8px 0px;
     border-radius: 8px;
     background: #fff;
     margin: auto;
@@ -46,14 +46,11 @@ textarea {
     top: 5%;
     right: 1%;
     display: flex;
-}
-
-.titleImgSection img {
     opacity: 0.54;
     margin: 0 15px;
     padding: 5px;
     cursor: pointer;
-}
+} 
 
 .titleImgSection img:hover {
     background-color: rgba(95, 99, 104, 0.157);
@@ -66,5 +63,29 @@ textarea {
 }
 .iconspanel
 {
+    display: flex;
     border: 1px solid black;
 }
+.matbutton{
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+@media  (min-width: 150px) and (max-width:670px){
+    .titleImgSection {
+        position: absolute;
+        top: 5%;
+        right: 1%;
+        //display: flex;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        margin: auto;
+        margin-left:5%;
+
+    }
+    
+}
+

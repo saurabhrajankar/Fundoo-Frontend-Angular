@@ -43,7 +43,9 @@ export class TakenoteComponent implements OnInit {
         this.note.AddNotes(reqData).subscribe((response:any)=>{
           console.log(response);
           this.takenote.emit(response);
+          this.createform.reset();
         })
+        
       }
     }
   }

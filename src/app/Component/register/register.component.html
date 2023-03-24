@@ -1,71 +1,61 @@
-<div fxLayoutAlign="center center">
-    <mat-card fxFlex="54" class="card">
-        <div class="regpart">
-            <div>
+<div class="main-div">
+    <mat-card class="card">
+        <div class="container">
+            <div class="title">
                 <mat-card-title class="fundoo">
-                    <div class="mat-card-header-text">
-                        <span style="color:#4285F4;font-family: Google Sans;">F</span>
-                        <span style="color:#DB4437;font-family: Google Sans;">u</span>
-                        <span style="color:#F4B400;font-family: Google Sans;">n</span>
-                        <span style="color:#0F9D58;font-family: Google Sans;">d</span>
-                        <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
-                        <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
-                    </div>
+                    <div class="F">F</div>
+                    <div class="U">U</div>
+                    <div class="N">N</div>
+                    <div class="D">D</div>
+                    <div class="O">O</div>
+                    <div class="O">O</div>
                 </mat-card-title>
+                <div>
+                    <mat-card-content class="sub-title">Create your Fundoo Account</mat-card-content>
+                </div>
             </div>
-            <br>
-            <div>
-                <mat-card-title class="mattitle">Create your Fundoo Account</mat-card-title>
-                <br>
-                <mat-card-subtitle class="matsubtitle">to continue to fundoo</mat-card-subtitle>
-            </div>
-            <Form [formGroup]="regform" (ngSubmit)="regSubmit()">
-                <div class="form1 ">
-                    <mat-form-field appearance="outline" style="display: inline-block; margin: 10px;">
+            <Form [formGroup]="regform" (ngSubmit)="regSubmit()" class="form">
+                <div class="form1">
+                    <mat-form-field appearance="outline">
                         <mat-label>First Name</mat-label>
                         <input matInput placeholder="First Name" formControlName="firstName">
                         <mat-error *ngIf="regform.value.firstName">Enter your Last name</mat-error>
                     </mat-form-field>
-                    <mat-form-field appearance="outline" style="display: inline-block; margin: 10px;">
+                    <mat-form-field appearance="outline">
                         <mat-label>Last Name</mat-label>
                         <input matInput placeholder="Last Name" formControlName="lastName">
                         <mat-error *ngIf="regform.value.lastName">Enter your Last name</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="form2">
-                    <mat-form-field appearance="outline" style="margin: 10px; width: 422px;">
+                    <mat-form-field appearance="outline">
                         <mat-label>Email</mat-label>
                         <input matInput placeholder="Email" formControlName="email">
                         <mat-error *ngIf="regform.value.email">Enter your last name</mat-error>
                         <mat-hint>You can use letters, numbers & periods</mat-hint>
-                        
                     </mat-form-field>
                 </div>
                 <div class="form3">
-                    <mat-form-field appearance="outline" class="form-field"
-                        style="display: inline-block; margin: 10px;">
+                    <mat-form-field appearance="outline" class="form-field">
                         <mat-label>Password</mat-label>
                         <input matInput placeholder="Password" type="password" formControlName="password">
                     </mat-form-field>
-                    <mat-form-field appearance="outline" class="form-field"
-                        style="display: inline-block; margin: 10px;">
+                    <mat-form-field appearance="outline">
                         <mat-label>Confirm Password</mat-label>
                         <input matInput placeholder="Confirm Password" type="password" formControlName="conpassword">
                         <mat-error *ngIf="regform.value.conpassword">Enter Confirm Password</mat-error>
                     </mat-form-field>
                 </div>
-                <div class="form4">
-                    <section>
-                        <mat-checkbox class="pass" color="primary" style="margin: 11px;">Show Password</mat-checkbox>
-                    </section>
-                    <div class="button1">
-                        <button id="login" mat-raised-button color="primary" style="margin-left: 350px;">Next</button>
-                    </div>
+                <div class="checkbox">
+                    <mat-checkbox class="pass">Show Password</mat-checkbox>
+                </div>
+                <div class="LoginButton">
+                    <button mat-flat-button type="submit" color="primary" class="registerbtn">Next</button>
                 </div>
             </Form>
         </div>
         <div class="image">
-            <img src="assets/account.svg" width="200px">
+            <img src="assets/account.svg">
             <div class="imgtext">One account. All of Fundoo working for you.</div>
         </div>
     </mat-card>

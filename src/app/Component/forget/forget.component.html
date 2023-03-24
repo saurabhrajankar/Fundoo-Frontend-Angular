@@ -1,36 +1,34 @@
-<div fxLayoutAlign="center center" >
+<div class="flexcontainer">
     <mat-card  flex class="card">
         <div>
             <mat-card-title class="fundoo">
-                <div class="mat-card-header-text">
-                    <span style="color:#4285F4;font-family: Google Sans;">F</span>
-                    <span style="color:#DB4437;font-family: Google Sans;">u</span>
-                    <span style="color:#F4B400;font-family: Google Sans;">n</span>
-                    <span style="color:#0F9D58;font-family: Google Sans;">d</span>
-                    <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
-                    <span style="color:rgb(146, 4, 228);font-family: Google Sans;">o</span>
-                </div>
+                <div class="F">F</div>
+                <div class="U">U</div>
+                <div class="N">N</div>
+                <div class="D">D</div>
+                <div class="O">O</div>
+                <div class="O">O</div>
             </mat-card-title>
         </div>
         <br>
         <div>
-            <mat-card-title class="mattitle" fxLayoutAlign="center center">Find your email</mat-card-title>
+            <mat-card-title class="mattitle" >Find your email</mat-card-title>
             <br>
-            <mat-card-subtitle class="matsubtitle" fxLayoutAlign="center center"><b>Enter your recovery mail</b></mat-card-subtitle>
+            <mat-card-subtitle class="matsubtitle"><b>Enter your recovery mail</b></mat-card-subtitle>
         </div>
 
-        <form [formGroup]="forgetform" (ngSubmit)="forgetsubmit()">
-            <div class="emailpass">
+        <form class="form"[formGroup]="forgetform" (ngSubmit)="forgetsubmit()">
+            <!-- <div class="emailpass"> -->
                 <mat-form-field appearance="outline" class="email" >
                     <mat-label aria-autocomplete="off">Email id</mat-label>
                     <input matInput placeholder="Enter your email id" formControlName="email" />
                     <mat-error *ngIf="forgetform.value.email">Enter Valid Email</mat-error>
                 </mat-form-field>
-            </div>
-            <div style="margin-left: 300px;">
-                <button mat-raised-button color="primary" >Next</button>
+            <!-- </div> -->
+            <div class="nextButton">
+                <button mat-flat-button color="primary" class="nextbutton">Next</button>
             </div>
         </form>
     </mat-card>
-
 </div>
+

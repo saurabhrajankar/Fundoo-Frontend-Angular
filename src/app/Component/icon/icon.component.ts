@@ -12,14 +12,15 @@ export class IconComponent implements OnInit {
   @Input() trashnoteC: any;
   @Output() RefreshEvent = new EventEmitter<string>();
   @Output() updateEvent =new EventEmitter<string>();
+  @Input() istrashed:any;
   trash:any;
   archiveNote:any;
   
   constructor(private notes: NoteService,private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
-    this.trash=this.trashnoteC.trash;  //visibal the notes 
-    this.archiveNote=this.trashnoteC.archiveNote;
+    this.trash=this.istrashed;  //visibal the notes 
+    //this.archiveNote=this.trashnoteC.archiveNote;
   }
   Colorsarray: Array<any> =
     [
