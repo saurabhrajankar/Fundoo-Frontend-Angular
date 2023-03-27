@@ -1,5 +1,5 @@
 .Allsearchbox {
-    
+    border: 2px ;
     display: flex;
     flex-direction: row;
     padding-top: 5px;
@@ -20,15 +20,13 @@
     width: 800px;
     font-size: medium;
     outline: none;
-   
 }
 
 .toolbar {
     //border: 1px solid red;
     background: white;
     border-bottom: solid 1px rgb(218, 212, 212);
-    margin-bottom: 1px;
-    
+    margin-bottom: 1px;  
 }
 
 .toolbarbuttons {
@@ -40,12 +38,10 @@
     display: inline-block;
 }
 
-.Sidetool {
-    margin-left: 200px;
-}
-
-.icons:hover {
-    background-color: rgb(153, 17, 17);
+.Logouttool {
+    border: 2px solid red;
+    display: flex;
+    margin-left: 11%;
 }
 
 .menubuttons {
@@ -53,18 +49,51 @@
     width: 100%;
 }
 //DownPanel
-.downcontainer
+.downcontainer  
 {
+    background-color: #fff;
+    border: 2px solid red;
     display: flex;
-    height: 900px;
-    
-    
+    height: 200%;
+    width: 99%;
+    //height: 100px;
+    // height: calc(100% - 64px);
+    // min-height: auto;
+    // overflow: hidden;
+    // padding-top: 8px;
+    // position: fixed;
+    // top: 64px;
+  //  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+   // width: 280px;
+    //z-index: 985;
+   // border-radius: 100%;
 }
+sidenavcontainer{
+    border: 2px solid rgb(98, 0, 255);
+    width: 55%;
+}
+sidenav{
+    border: 2px solid rgb(255, 51, 0); 
+    width: 55%;
+    height: 35%;
+}
+.rightname{
+    border: 2px solid red; 
+    display: flex;
+    flex-direction: column;
+    width: 500%;
+    
+    //
+}
+
 .labels:hover
 {
-    background-color: lightgrey;
-    cursor: pointer;
-    
+    background-color: #feefc3;
+    cursor: pointer; 
+    //border-radius: 100%;
+   // border-top-left-radius: 5px;
+   //  border-top-left-radius:5px;
+    //box-shadow: 0 0 5px rgba(199, 136, 26, 0.5);
 }
 @media only screen and (max-width: 800px){
     .Allsearchbox{

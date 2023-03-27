@@ -18,7 +18,7 @@ export class TakenoteComponent implements OnInit {
     elborate(){
       this.display = !this.display;
       this.ImgOne=false;
-      this.ImgTwo = true;
+      this.ImgTwo =true;
     }
     constructor(private note:NoteService,private activeRoute: ActivatedRoute) { }
     ngOnInit(): void {

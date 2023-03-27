@@ -7,9 +7,7 @@ import { NoteService } from 'src/app/Services/Note/note.service';
   styleUrls: ['./note-c.component.scss']
 })
 export class NoteCComponent implements OnInit {
-
   Notearray:any;
-  
   constructor(private note: NoteService){}
 
   ngOnInit(): void {

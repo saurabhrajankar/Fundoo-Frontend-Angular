@@ -1,9 +1,11 @@
 <div class="container" [style.background]="data.color">
-    <div class="panel" >
-    <mat-card-title><input matinput class="title" [(ngModel)]="title" ></mat-card-title>
-    <mat-card-title> <input matinput class="descrption" [(ngModel)]="descrption" ></mat-card-title>
-    <div class="icon"  [style.background]="data.color">
-        <app-icon [trashnoteC]="data"></app-icon>   
-        <button mat-button (click)="CloseDialogBox()" class="closeButton" [style.background]="data.color">Close</button>
+    <div class="panel">
+        <mat-card-title><input matinput class="title" [(ngModel)]="title"></mat-card-title>
+        <mat-card-title> <input matinput class="descrption" [(ngModel)]="descrption"></mat-card-title>
+        <div class="icon" [style.background]="data.color">
+            <app-icon [trashnoteC]="data"></app-icon>
+            <button mat-button (click)="CloseDialogBox()" class="closeButton"
+                [style.background]="data.color">Close</button>
+        </div>
     </div>
 </div>

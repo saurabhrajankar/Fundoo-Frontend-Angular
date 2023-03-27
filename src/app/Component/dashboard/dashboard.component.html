@@ -19,24 +19,33 @@
             <img style="margin-left: 10px; height: 20px;margin-top: 8px;" src="../../../assets/NoteImg/search_FILL0_wght400_GRAD0_opsz48.png">
             <input class="inputSearchbox" type="search" placeholder="Search" (keyup)="search($event)" >
         </div>
-        <!-- Side tool bar -->
-        <div class="Sidetool">
+        <!-- Logouttool -->
+        <div class="Logouttool">
             <button mat-icon-button class="toolbarbuttons">
                 <img src="../../../assets/NoteImg/refresh_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Refresh">
             </button>
-
             <button mat-icon-button class="toolbarbuttons">
                 <img src="../../../assets/NoteImg/dns_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="List View">
             </button>
-
             <button mat-icon-button class="toolbarbuttons">
-                <img src="../../../assets/NoteImg/settings_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Settings">
+                <img src="../../../assets/NoteImg/settings_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px; " title="Settings">
+            </button>
+            <button mat-icon-button class="toolbarbuttons">
+                <img src="../../../assets/NoteImg/Apps.png" style="height:26px;width:26px;" title="APPS">
+            </button>
+            <button mat-icon-button title="More" [matMenuTriggerFor]="parts">
+                <img src="../../../assets/NoteImg/ProfilePic.png" style="height:26px;width:26px;margin-top: 16px;" title="Fundoo Account">
+                <mat-menu #parts>
+                    <button mat-menu-item>Saurabh Rajankar</button>
+                    <button mat-menu-item (click)="Logout()">Logout</button>
+                </mat-menu>
             </button>
         </div>
     </mat-toolbar>
 </div>
+
 <div class="downcontainer">
-    <div class="lefticon" style="width: 70px;height: 800px;">
+    <div class="lefticon">
         <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()" routerLink="/Dashboard/notes">
             <img src="../../../assets/NoteImg/lightbulb_FILL0_wght400_GRAD0_opsz48.png" style="height:26px;width:26px;" title="Refresh">
         </button>
@@ -57,9 +66,9 @@
             <img src="../../../assets/NoteImg/delete_FILL0_wght400_GRAD0_opsz48 (1).png" style="height:26px;width:26px;" title="Trash" >
         </button>
     </div>
-    <mat-drawer-container class="example-container" autosize>
-       <mat-drawer #drawer class="example-sidenav" mode="side">    
-            <div class="rightname" style="width: 230px;height: 800px;">
+    <mat-drawer-container class="sidenavcontainer">
+       <mat-drawer #drawer class="sidenav" mode="side">    
+            <div class="rightname">
                 <div style="font-family: serif;" class="labels" >
                     <h2 style="font-family: serif;padding-left: 10px; margin-top: 14px;">Notes</h2>
                 </div>
@@ -77,7 +86,6 @@
                 </div>
             </div>
         </mat-drawer>
-       
     </mat-drawer-container>
     <div style="width: 100%;height:fit-content">
         <router-outlet></router-outlet>

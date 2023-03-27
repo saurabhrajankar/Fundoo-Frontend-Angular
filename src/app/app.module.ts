@@ -30,6 +30,7 @@ import { UpdatenoteComponent } from './Component/updatenote/updatenote.component
 import { TrashComponent } from './Component/trash/trash.component';
 import { ArchiveComponent } from './Component/archive/archive.component';
 import { FilterPipe } from './Component/Pipe/filter.pipe';
+import { AuthgurdserviceService } from './Services/authservice/authgurdservice.service';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,7 @@ import { FilterPipe } from './Component/Pipe/filter.pipe';
     MatSnackBarModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [AuthgurdserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

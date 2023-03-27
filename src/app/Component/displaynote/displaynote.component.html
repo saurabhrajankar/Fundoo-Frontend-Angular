@@ -11,7 +11,7 @@
                 <p (click)="EditNoteDialogBox(notes)">{{notes.descrption}}</p>
             </mat-card-content>
             
-            <div class="icon">
+            <div class="icon" >
                 <app-icon [trashnoteC]="notes" [istrashed]="trash"  (RefreshEvent)="receiveMessage($event)"></app-icon>
             </div>
         </mat-card>
